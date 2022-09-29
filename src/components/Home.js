@@ -2,11 +2,11 @@ import React, { Fragment } from "react";
 
 import Church from "../assets/cropped-images/church-bg.jpg";
 
-import Inside from "../assets/church-inside.jpg";
+import Inside from "../assets/cropped-images/church-inside.jpg";
 
 import classes from "./Home.module.css";
 
-import Location from "../assets/location.jpg";
+import Location from "../assets/cropped-images/location.jpg";
 
 import { GrMapLocation } from "react-icons/gr";
 
@@ -14,15 +14,15 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import { Carousel } from "react-responsive-carousel";
 
-import Photo1 from "../assets/slider-photos/1.jpg";
-import Photo2 from "../assets/slider-photos/2.jpg";
-import Photo3 from "../assets/slider-photos/3.jpg";
-import Photo4 from "../assets/slider-photos/4.jpg";
-import Photo5 from "../assets/slider-photos/5.jpg";
-import Photo6 from "../assets/slider-photos/6.jpg";
-import Photo8 from "../assets/slider-photos/8.jpg";
-import Photo9 from "../assets/slider-photos/9.jpg";
-import Photo10 from "../assets/slider-photos/10.jpg";
+import Photo1 from "../assets/cropped-images/slider/1.jpg";
+import Photo2 from "../assets/cropped-images/slider/2.jpg";
+import Photo3 from "../assets/cropped-images/slider/3.jpg";
+import Photo4 from "../assets/cropped-images/slider/4.jpg";
+import Photo5 from "../assets/cropped-images/slider/5.jpg";
+import Photo6 from "../assets/cropped-images/slider/6.jpg";
+import Photo8 from "../assets/cropped-images/slider/8.jpg";
+import Photo9 from "../assets/cropped-images/slider/9.jpg";
+import Photo10 from "../assets/cropped-images/slider/10.jpg";
 
 import { useNavigate } from "react-router-dom";
 

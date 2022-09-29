@@ -5,11 +5,11 @@ import classes from "./About.module.css";
 import { GrMapLocation } from "react-icons/gr";
 import { BiCalendar } from "react-icons/bi";
 
-import Silvaj from "../assets/about-photos/silvaj.jpg";
-import Church from "../assets/about-photos/church.jpg";
-import Pastor from "../assets/about-photos/otec-pavlo.jpg";
-import Church1 from "../assets/church-outside-2.jpg";
-import Church2 from "../assets/church-inside-1.jpg";
+import Silvaj from "../assets/cropped-images/about/silvaj.jpg";
+import Church from "../assets/cropped-images/about/church.jpg";
+import Pastor from "../assets/cropped-images/about/otec-pavlo.jpg";
+import Church1 from "../assets/cropped-images/about/church-outside-2.jpg";
+import Church2 from "../assets/cropped-images/about/church-inside-1.jpg";
 
 const About = () => {
   return (

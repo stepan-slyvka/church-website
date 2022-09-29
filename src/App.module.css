@@ -1,0 +1,25 @@
+/* Desktop */
+.arrowUp {
+  position: fixed;
+  display: inline-flex;
+  z-index: 10;
+  color: #fff;
+  background-color: #3399ff;
+  padding: 0.7rem;
+  right: 55px;
+  bottom: 8%;
+  cursor: pointer;
+}
+
+.arrowUp:hover {
+  transform: scale(1.1);
+}
+
+/* For Mobile Devices */
+
+@media screen and (min-width: 340px) and (max-width: 768px) {
+  .arrowUp {
+    right: 30px;
+    bottom: 4%;
+  }
+}

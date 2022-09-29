@@ -1,0 +1,110 @@
+/* Desktop */
+.main-wrapper {
+  margin: 3rem 0;
+  background-color: #f2f2f2;
+  box-shadow: 2px 3px 7px 3px rgba(0, 0, 0, 0.42);
+}
+
+.main-wrapper h1 {
+  text-align: center;
+  padding: 25px 0;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  padding-bottom: 25px;
+}
+
+.container {
+  grid-area: 1 / 1 / 6 / 3;
+  margin-left: 100px;
+  text-align: justify;
+}
+
+.aside {
+  grid-area: 1 / 4 / 6 / 6;
+  text-align: justify;
+  margin-right: 50px;
+}
+
+.history-section-reverse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  margin: 25px 0;
+}
+
+.history-section-reverse img {
+  margin-left: 20px;
+}
+
+.history-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 15px 0;
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.history p {
+  padding: 25px 0;
+  margin: 0;
+}
+
+.margin {
+  margin-right: 20px;
+}
+
+.image {
+  width: 600px;
+  height: 400px;
+}
+
+/* Tablets */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .pastor img {
+    width: 180px;
+  }
+
+  .container {
+    width: 100%;
+  }
+}
+
+/* Mobile Devices */
+
+@media screen and (min-width: 340px) and (max-width: 768px) {
+  .content-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .aside {
+    margin: 0 auto;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+  }
+}

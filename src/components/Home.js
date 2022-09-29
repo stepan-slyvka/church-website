@@ -1,6 +1,8 @@
-import React from "react";
+import React, { Fragment } from "react";
 
-import Church from "../assets/church-bg.jpg";
+import Church from "../assets/cropped-images/church-bg.jpg";
+
+import Inside from "../assets/church-inside.jpg";
 
 import classes from "./Home.module.css";
 
@@ -8,11 +10,9 @@ import Location from "../assets/location.jpg";
 
 import { GrMapLocation } from "react-icons/gr";
 
-import Slider from "react-slick";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import "slick-carousel/slick/slick.css";
-
-import "slick-carousel/slick/slick-theme.css";
+import { Carousel } from "react-responsive-carousel";
 
 import Photo1 from "../assets/slider-photos/1.jpg";
 import Photo2 from "../assets/slider-photos/2.jpg";
@@ -20,77 +20,17 @@ import Photo3 from "../assets/slider-photos/3.jpg";
 import Photo4 from "../assets/slider-photos/4.jpg";
 import Photo5 from "../assets/slider-photos/5.jpg";
 import Photo6 from "../assets/slider-photos/6.jpg";
-import Photo7 from "../assets/slider-photos/7.jpg";
 import Photo8 from "../assets/slider-photos/8.jpg";
 import Photo9 from "../assets/slider-photos/9.jpg";
 import Photo10 from "../assets/slider-photos/10.jpg";
 
-const Home = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    pauseOnHover: true,
-  };
+import { useNavigate } from "react-router-dom";
 
-  const photos = () => [
-    {
-      id: 1,
-      src: Photo1,
-      alt: "carousel",
-    },
-    {
-      id: 2,
-      src: Photo2,
-      alt: "carousel",
-    },
-    {
-      id: 3,
-      src: Photo3,
-      alt: "carousel",
-    },
-    {
-      id: 4,
-      src: Photo4,
-      alt: "carousel",
-    },
-    {
-      id: 5,
-      src: Photo5,
-      alt: "carousel",
-    },
-    {
-      id: 6,
-      src: Photo6,
-      alt: "carousel",
-    },
-    {
-      id: 7,
-      src: Photo7,
-      alt: "carousel",
-    },
-    {
-      id: 8,
-      src: Photo8,
-      alt: "carousel",
-    },
-    {
-      id: 9,
-      src: Photo9,
-      alt: "carousel",
-    },
-    {
-      id: 10,
-      src: Photo10,
-      alt: "carousel",
-    },
-  ];
+const Home = () => {
+  const navigate = useNavigate();
 
   return (
-    <>
+    <Fragment>
       {/* Main */}
 
       <section className={classes["main-wrapper"]}>
@@ -103,7 +43,12 @@ const Home = () => {
               безплотних сил с. Нове Давидково
             </h1>
           </div>
-          <div className={classes["button-wrapper"]}>
+          <div
+            onClick={() => {
+              navigate("/contact", { replace: true });
+            }}
+            className={classes["button-wrapper"]}
+          >
             <button>Записатися на молитву</button>
           </div>
         </div>
@@ -129,6 +74,29 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Review Schedule */}
+
+      <section className={classes["main-wrapper"]}>
+        <img src={Inside} alt="christ" />
+
+        <div className={classes.container}>
+          <div className={classes.name}>
+            <h1>
+              В нашому храмі регулярно проходять богослужіння. Ознайомитися з
+              детальним розкладом можна в розділі "Новини"
+            </h1>
+          </div>
+          <div
+            onClick={() => {
+              navigate("/news", { replace: true });
+            }}
+            className={classes["button-wrapper"]}
+          >
+            <button>Ознайомитися з розкладом богослужінь</button>
+          </div>
+        </div>
+      </section>
+
       {/* Photo Gallery */}
 
       <section className={classes["photos-wrapper"]}>
@@ -136,37 +104,24 @@ const Home = () => {
           <h1>Фото з життя громади</h1>
         </div>
 
-        <Slider {...settings} className={classes["carousel-wrapper"]}>
-          {/* {photos.map(({ id, src, alt }) => (
-            <div key={id}>
-              <img src={src} alt={alt} />
-            </div>
-          ))} */}
-          <div>
-            <div>
-              <h3>1</h3>
-            </div>
-            <div>
-              <h3>2</h3>
-            </div>
-            <div>
-              <h3>3</h3>
-            </div>
-            <div>
-              <h3>4</h3>
-            </div>
-            <div>
-              <h3>5</h3>
-            </div>
-            <div>
-              <h3>6</h3>
-            </div>
-          </div>
-        </Slider>
+        <Carousel
+          infiniteLoop={true}
+          autoPlay={true}
+          swipeable={true}
+          className={classes.photos}
+        >
+          <img src={Photo1} alt="carousel" />
+          <img src={Photo2} alt="carousel" />
+          <img src={Photo3} alt="carousel" />
+          <img src={Photo4} alt="carousel" />
+          <img src={Photo5} alt="carousel" />
+          <img src={Photo6} alt="carousel" />
+          <img src={Photo8} alt="carousel" />
+          <img src={Photo9} alt="carousel" />
+          <img src={Photo10} alt="carousel" />
+        </Carousel>
       </section>
-
-      {/* Review Schedule */}
-    </>
+    </Fragment>
   );
 };
 

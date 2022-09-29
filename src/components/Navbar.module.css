@@ -1,11 +1,10 @@
+/* Desktop */
 .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px;
-  background-color: #008080;
+  background-color: #f0f8ff;
   color: #fff;
-  height: 3vh;
   z-index: 100;
 }
 
@@ -20,7 +19,7 @@
 }
 
 .menu li {
-  padding: 5px 24px;
+  padding: 5px 30px;
 }
 
 .menu li:hover {
@@ -29,14 +28,57 @@
 
 .link {
   text-decoration: none;
-  color: #fff;
-}
-
-.link:hover {
-  color: #00ffff;
+  color: #003366;
 }
 
 .logo img {
   width: 100px;
   height: 80px;
+  padding-left: 30px;
+}
+
+.active {
+  text-decoration: none;
+  color: #003366;
+  border-bottom: 3px solid #0a75ad;
+}
+
+/* Tablets */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .logo img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* For Mobile Devices */
+
+@media screen and (min-width: 340px) and (max-width: 768px) {
+  .logo img {
+    width: 100%;
+    height: auto;
+    padding-left: 0;
+  }
+
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .menu {
+    width: 100%;
+  }
+
+  .menu ul {
+    padding: 0;
+    justify-content: center;
+  }
+
+  .menu li {
+    padding: 0 10px;
+  }
 }

@@ -8,29 +8,54 @@ import classes from "./Navbar.module.css";
 
 const Navbar = () => {
   return (
-    <nav className={classes.wrapper}>
+    <nav name="navbar" className={classes.wrapper}>
+      {/* Logo */}
+
       <div className={classes.logo}>
         <img src={Logo} alt="Logo" />
       </div>
+
+      {/* Menu */}
+
       <div className={classes.menu}>
         <ul>
           <li>
-            <NavLink className={classes.link} to="">
+            <NavLink
+              className={(navData) =>
+                navData.isActive ? classes.active : classes.link
+              }
+              to="/home"
+            >
               Головна
             </NavLink>
           </li>
           <li>
-            <NavLink className={classes.link} to="about">
+            <NavLink
+              className={(navData) =>
+                navData.isActive ? classes.active : classes.link
+              }
+              to="about"
+            >
               Про нас
             </NavLink>
           </li>
           <li>
-            <NavLink className={classes.link} to="news">
+            <NavLink
+              className={(navData) =>
+                navData.isActive ? classes.active : classes.link
+              }
+              to="news"
+            >
               Новини
             </NavLink>
           </li>
           <li>
-            <NavLink className={classes.link} to="contact">
+            <NavLink
+              className={(navData) =>
+                navData.isActive ? classes.active : classes.link
+              }
+              to="contact"
+            >
               Контакти
             </NavLink>
           </li>

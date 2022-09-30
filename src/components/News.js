@@ -11,7 +11,7 @@ const News = () => {
         {/* Schedule */}
 
         <div className={classes.schedule}>
-          <h1>Розклад богослужінь</h1>
+          <h1>Розклад богослужінь(наразі не актуальний)</h1>
           <img src={Schedule} alt="schedule" />
         </div>
 

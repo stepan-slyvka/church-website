@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import Home from "./components/Home";
 import About from "./components/About";
@@ -14,6 +14,7 @@ import classes from "./App.module.css";
 import { HiArrowUp } from "react-icons/hi";
 
 import { Link } from "react-scroll";
+import NotFound from "./components/NotFound";
 
 function App() {
   const [showTopBtn, setShowTopBtn] = useState(false);
@@ -39,12 +40,11 @@ function App() {
         </Link>
       )}
       <Routes>
-        <Route path="/" element={<Navigate to="/home" />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/news" element={<News />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<Navigate to="/home" />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </Fragment>

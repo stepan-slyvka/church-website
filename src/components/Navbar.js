@@ -20,42 +20,22 @@ const Navbar = () => {
       <div className={classes.menu}>
         <ul>
           <li>
-            <NavLink
-              className={(navData) =>
-                navData.isActive ? classes.active : classes.link
-              }
-              to="/home"
-            >
+            <NavLink className={classes.link} to="/">
               Головна
             </NavLink>
           </li>
           <li>
-            <NavLink
-              className={(navData) =>
-                navData.isActive ? classes.active : classes.link
-              }
-              to="about"
-            >
+            <NavLink className={classes.link} to="about">
               Про нас
             </NavLink>
           </li>
           <li>
-            <NavLink
-              className={(navData) =>
-                navData.isActive ? classes.active : classes.link
-              }
-              to="news"
-            >
+            <NavLink className={classes.link} to="news">
               Новини
             </NavLink>
           </li>
           <li>
-            <NavLink
-              className={(navData) =>
-                navData.isActive ? classes.active : classes.link
-              }
-              to="contact"
-            >
+            <NavLink className={classes.link} to="contact">
               Контакти
             </NavLink>
           </li>

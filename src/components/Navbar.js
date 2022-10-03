@@ -11,9 +11,9 @@ const Navbar = () => {
     <nav name="navbar" className={classes.wrapper}>
       {/* Logo */}
 
-      <div className={classes.logo}>
+      <NavLink to="/" className={classes.logo}>
         <img src={Logo} alt="Logo" />
-      </div>
+      </NavLink>
 
       {/* Menu */}
 

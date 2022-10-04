@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import classes from "./About.module.css";
 
@@ -11,7 +11,13 @@ import Pastor from "../assets/cropped-images/about/otec-pavlo.jpg";
 import Church1 from "../assets/cropped-images/about/church-outside-2.jpg";
 import Church2 from "../assets/cropped-images/about/church-inside-1.jpg";
 
+import ReactGA from "react-ga";
+
 const About = () => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   return (
     <div className={classes["main-wrapper"]}>
       <h1>Парафія св. Архистратига Михаїла с. Нове Давидково</h1>

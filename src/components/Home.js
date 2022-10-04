@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 
 import Church from "../assets/cropped-images/church-bg.jpg";
 
@@ -24,10 +24,16 @@ import Photo8 from "../assets/cropped-images/slider/8.jpg";
 import Photo9 from "../assets/cropped-images/slider/9.jpg";
 import Photo10 from "../assets/cropped-images/slider/10.jpg";
 
+import ReactGA from "react-ga";
+
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
 
   return (
     <Fragment>

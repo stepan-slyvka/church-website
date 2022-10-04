@@ -16,6 +16,11 @@ import { HiArrowUp } from "react-icons/hi";
 import { Link } from "react-scroll";
 import NotFound from "./components/NotFound";
 
+import ReactGA from "react-ga";
+
+const TRACKING_ID = "UA-213535990-1";
+ReactGA.initialize(TRACKING_ID);
+
 function App() {
   const [showTopBtn, setShowTopBtn] = useState(false);
 

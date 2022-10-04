@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import classes from "./Contact.module.css";
 
@@ -12,6 +12,8 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa";
 import { CgMail } from "react-icons/cg";
 import { AiOutlinePhone } from "react-icons/ai";
+
+import ReactGA from "react-ga";
 
 const Contact = () => {
   //  Form validation here
@@ -51,6 +53,10 @@ const Contact = () => {
     },
     validate,
   });
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
 
   return (
     <section className={classes["main-wrapper"]}>

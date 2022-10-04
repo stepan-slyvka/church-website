@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import classes from "./News.module.css";
 
 import Schedule from "../assets/schedule-test.jpg";
 
+import ReactGA from "react-ga";
+
 const News = () => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   return (
     <div className={classes["main-wrapper"]}>
       <section className={classes.container}>

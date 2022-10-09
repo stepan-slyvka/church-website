@@ -67,6 +67,7 @@ const Home = () => {
           <h1>
             Наша локація <GrMapLocation />
           </h1>
+          <p>(Нажміть на картинку, щоб відкрити карту)</p>
         </div>
 
         <div className={classes["location-image"]}>

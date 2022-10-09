@@ -107,4 +107,8 @@
     width: 100%;
     height: auto;
   }
+
+  .wrapper {
+    margin: 0 1rem;
+  }
 }

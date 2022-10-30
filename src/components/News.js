@@ -17,7 +17,7 @@ const News = () => {
         {/* Schedule */}
 
         <div className={classes.schedule}>
-          <h1>Розклад богослужінь(10.10.2022 - 16.10.2022)</h1>
+          <h1>Розклад богослужінь(31.10.2022 - 06.11.2022)</h1>
           <img src={Schedule} alt="schedule" />
         </div>
 
@@ -38,7 +38,11 @@ const News = () => {
           </div>
 
           <div className={classes.wrapper}>
-            <p>14 жовтня 2022 року - Покров Пресвятої Богородиці</p>
+            <p>31 жовтня 2022 року - день пам'яті мученика Теодора Ромжі</p>
+          </div>
+
+          <div className={classes.wrapper}>
+            <p>1 листопада 2022 року - день пам'яті всіх померлих</p>
           </div>
         </div>
       </section>
